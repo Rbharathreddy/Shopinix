@@ -1,0 +1,191 @@
+.main{
+ 
+    height: auto;
+    padding: 10px;
+    border:1px solid;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color:black;
+    font-family: 'Quicksand', serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 1rem;
+    background-color: whitesmoke;
+  }
+  .container{
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+  }
+  .parent1{
+    width: 420px;
+    height: auto;
+    text-align: left;
+  }
+  input{
+    width: 420px;
+    height: 30px;
+  }
+  .label {
+    font-weight: bold;
+   padding: 10px 10px;
+   font-size: 20px;
+  }
+  
+  .item1{
+    display: flex;
+    justify-content: right;
+    padding-right:35px ;
+  }
+  button{
+   text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px 30px;
+    cursor: pointer;
+  }
+  .button2{
+    background-color: aqua;
+  }
+  .parent2 {
+    width: 90px;
+    height: auto;
+    background-color: aquamarine;
+  }
+  
+  .image {
+    max-width: 100%; 
+    height: auto;    
+  }
+  
+  /* Common styles for both desktop and mobile */
+  .main {
+    height: auto;
+    padding: 10px;
+    border: 1px solid;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 1200px;
+    color: black;
+    font-family: 'Quicksand', serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 1rem;
+    background-color: whitesmoke;
+  }
+  
+  .container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row on smaller screens */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .parent1 {
+    width: 100%; /* Full width for mobile, adjust as needed */
+    text-align: left;
+    box-sizing: border-box;
+  }
+  
+  input {
+    /* width: 100%; /* Full width for mobile, adjust as needed */
+    /* height: 30px;
+    box-sizing: border-box; */ 
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+ }
+  
+  .label {
+    font-weight: bold;
+    padding: 10px 10px;
+    font-size: 20px;
+  }
+  
+  .item1 {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    .left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+   
+  }
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  button {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: 3px solid blue;
+  }
+  
+  .parent2 {
+    width: 90%; /* Full width for mobile, adjust as needed */
+    height: auto;
+    background-color: aquamarine;
+    box-sizing: border-box;
+  }
+  
+  .image {
+    max-width: 90%;
+    height: auto;
+  }
+  
+  /* Media queries for desktop */
+  @media only screen and (min-width: 768px) {
+    .parent1 {
+      width: 420px; /* Adjust as needed */
+    }
+  
+    input {
+      width: 420px; /* Adjust as needed */
+    }
+  
+    .item1 {
+      padding-right: 35px; /* Adjust as needed */
+    }
+  
+    button {
+      margin: 10px 30px;
+    }
+  
+    .parent2 {
+      width: 200px; /* Adjust as needed */
+    }
+  }
+  
+  /* Media queries for tablet */
+  @media only screen and (min-width: 600px) and (max-width: 767px) {
+    .parent1,
+    input,
+    .item1,
+    button {
+      width: 100%;
+    }
+  
+    .item1 {
+      padding-right: 0;
+    }
+  
+    .parent2 {
+      width: 40%;
+    }
+  }
