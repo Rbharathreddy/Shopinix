@@ -5,12 +5,12 @@
     <form>
       <!-- Basic Details Section -->
       <div>
-        <label for="fname" style="font-weight: 800;">Product Name</label><br>
+        <label for="fname" style="font-weight: 800;">Product Name</label>
         <input type="text" id="fname" name="fname" class="input" placeholder="Enter your username"
-          [(ngModel)]="data.head"><br>
+          [(ngModel)]="data.head">
       </div>
       <div>
-        <label for="fname" style="font-weight: 800;">Product Description</label><br>
+        <label for="fname" style="font-weight: 800;">Product Description</label>
         <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Enter your input text"
           [(ngModel)]="data.description"></textarea><br>
       </div>
@@ -19,16 +19,12 @@
         <!-- <img src="" width="150px" alt=""> -->
         <input type="file" (change)="onFileSelected($event)" accept="image/*">
       </div>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="width: 20px; height: 20px;">
+        <label for="vehicle1">
+          <h5>this product has an SKU code</h5>
+        </label><br>
       <div>
-        <span>
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="width: 20px; height: 20px;">
-          <label for="vehicle1">
-            <h5>this product has an SKU code</h5>
-          </label><br>
-        </span>
-      </div>
-      <div>
-        <input type="text" id="fname" name="fname" placeholder="Eg.PROD001"><br>
+        <input type="text" id="fname" name="fname" placeholder="Eg.PROD001">
         <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="width: 20px; height: 20px;">
         <label for="vehicle1">
           <h5>this product has an HSN/SAC code</h5>
@@ -37,29 +33,6 @@
       <div>
         <hr style="border: 2px solid black;">
       </div>
-      <!-- Pricing Details Section -->
-      <!-- <!<h2>Pricing Details</h2> 
-                <div class="last-main">
-                  <div>
-                    <div class="form-group checkbox-group">
-                        <label>
-                            <input type="checkbox" name="inclusiveGST"> Price inclusive of GST
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="productName"></label>
-                        <input   class="input-2"type="text" id="productName" name="productName" placeholder="Enter product name">
-                    </div>
-                    <div class="form-group">
-                        <label for="netPrice"></label>
-                        <input class="input-2" type="number" id="netPrice" name="netPrice" placeholder="eg- 80">
-                    </div>
-                    <div class="form-group">
-                        <label for="discountPercentage">Discount Percentage</label>
-                        <input class="input-2"  type="number" id="discountPercentage" name="discountPercentage" placeholder="eg- 40">
-                    </div>
-                 </div>
-                </div> -->
     </form>
     <br>
     <h2> Pricing Details</h2>
@@ -94,18 +67,27 @@
         </div>
       </form>
     </div>
-
-    <button routerLink="/second" class="button-1">Back</button>
+    <button routerLink="/second" type="submit" form="form1" value="back" style="border-radius: 3px; padding: 20px 40px; font-size: 20px;"> <i class="arrow left"></i>Back</button> 
+    <!-- <button routerLink="/second" class="button-1">Back</button> -->
+    <button routerLink="/third" type="submit" form="form1" value="next" style="border-radius: 3px solid blue; padding: 20px 40px; font-size: 20px; background-color: blue; color: white;">Next</button>
   </div>
-  <div>
+  <div class="left-box">
     <div class="c-img">
-      <img *ngIf="imageSrc" [src]="imageSrc">
+      <img *ngIf="imageSrc" [src]="imageSrc" width="350px" height="150px" style="margin-top: 0px;">
     </div>
-    <div>
+    <br>
+    <div class="inner"> 
       <h1 *ngIf="data.head.length==0">Product Tittle</h1>
       <h1 *ngIf="data.head.length>0">{{data.head}}</h1>
-      <p *ngIf="data.description.length==0">Product Description</p>
-      <p *ngIf="data.description.length>0">{{data.description}}</p>
+      <div class="small">
+        <p *ngIf="data.description.length==0">Product Description</p>
+        <p *ngIf="data.description.length>0">{{data.description}}</p>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+
+
