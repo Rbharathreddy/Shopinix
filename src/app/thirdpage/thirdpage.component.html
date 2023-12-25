@@ -1,35 +1,44 @@
 <div class="main">
-        <div class="heading">
-            <h1>Lets add your first product</h1>
-            <h3>Basic details</h3>
-            <form>
-                <!-- Basic Details Section -->
-                <div>
-                    <label for="fname" style="font-weight: 800;">Product Name</label><br>
-                    <input type="text" id="fname" name="fname" class="input" placeholder="Enter your username"><br>
-                </div>
-                <div>
-                    <label for="fname" style="font-weight: 800;">Product Description</label><br>
-                    <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Enter your input text"></textarea><br>
-                </div>
-                <label for="fname" style="font-weight: 800;">Add Image(s)</label><br>
-                <i class="fa fa-image" style="font-size:66px;width: 200px; height: 50px;"></i>
-                <div>
-                    <span>
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="width: 20px; height: 20px;">
-                        <label for="vehicle1"><h5>this product has an SKU code</h5></label><br>
-                    </span>
-                </div>
-                <div>
-                    <input type="text" id="fname" name="fname" placeholder="Eg.PROD001"><br>
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="width: 20px; height: 20px;">
-                    <label for="vehicle1"><h5>this product has an HSN/SAC code</h5></label><br> 
-                </div>
-                <div>
-                    <hr style="border: 2px solid black;">
-                </div>
-                <!-- Pricing Details Section -->
-                <!-- <!<h2>Pricing Details</h2> 
+  <div class="heading">
+    <h1>Lets add your first product</h1>
+    <h3>Basic details</h3>
+    <form>
+      <!-- Basic Details Section -->
+      <div>
+        <label for="fname" style="font-weight: 800;">Product Name</label><br>
+        <input type="text" id="fname" name="fname" class="input" placeholder="Enter your username"
+          [(ngModel)]="data.head"><br>
+      </div>
+      <div>
+        <label for="fname" style="font-weight: 800;">Product Description</label><br>
+        <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Enter your input text"
+          [(ngModel)]="data.description"></textarea><br>
+      </div>
+      <label for="fname" style="font-weight: 800;">Add Image(s)</label><br>
+      <div class="img-input" (change)="onFileSelected($event)">
+        <!-- <img src="" width="150px" alt=""> -->
+        <input type="file" (change)="onFileSelected($event)" accept="image/*">
+      </div>
+      <div>
+        <span>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="width: 20px; height: 20px;">
+          <label for="vehicle1">
+            <h5>this product has an SKU code</h5>
+          </label><br>
+        </span>
+      </div>
+      <div>
+        <input type="text" id="fname" name="fname" placeholder="Eg.PROD001"><br>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="width: 20px; height: 20px;">
+        <label for="vehicle1">
+          <h5>this product has an HSN/SAC code</h5>
+        </label><br>
+      </div>
+      <div>
+        <hr style="border: 2px solid black;">
+      </div>
+      <!-- Pricing Details Section -->
+      <!-- <!<h2>Pricing Details</h2> 
                 <div class="last-main">
                   <div>
                     <div class="form-group checkbox-group">
@@ -51,52 +60,52 @@
                     </div>
                  </div>
                 </div> -->
-            </form>
-            <br>
-            <h2> Pricing Details</h2>
-            <div class="container">
-                <form>
-                  <div class="user-details">
-                    
-                    <div class="input-box">
-                      <span class="details">Net price </span>
-                      <input type="number" name="" id="" placeholder="eg- 80" required />
-                    </div>
-                    <div class="input-box">
-                      <span class="details">List price</span>
-                      <input type="number" name="" id="" placeholder="eg- 10" required />
-                    </div>
-                    <div class="input-box">
-                      <span class="details">Discount Percentage</span>
-                      <input type="number" name="" id="" placeholder="eg-110" required />
-                    </div>
-                    <div class="input-box">
-                      <span class="details">GST rate</span>
-                      <input type="text" name="" id="" placeholder="eg-110" required />
-                    </div>
-                    <div class="input-box">
-                      <span class="details">Shipping charges (if any)</span>
-                      <input type="text" name="" id="" placeholder="eg-40" required />
-                    </div>
-                    <div class="input-box">
-                      <span class="details">Stock level</span>
-                      <input type="text" name="" id="" placeholder="eg-110" required />
-                    </div>
-                  </div>
-                </form>
-              </div>
+    </form>
+    <br>
+    <h2> Pricing Details</h2>
+    <div class="container">
+      <form>
+        <div class="user-details">
+
+          <div class="input-box">
+            <span class="details">Net price </span>
+            <input type="number" name="" id="" placeholder="eg- 80" required />
+          </div>
+          <div class="input-box">
+            <span class="details">List price</span>
+            <input type="number" name="" id="" placeholder="eg- 10" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Discount Percentage</span>
+            <input type="number" name="" id="" placeholder="eg-110" required />
+          </div>
+          <div class="input-box">
+            <span class="details">GST rate</span>
+            <input type="text" name="" id="" placeholder="eg-110" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Shipping charges (if any)</span>
+            <input type="text" name="" id="" placeholder="eg-40" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Stock level</span>
+            <input type="text" name="" id="" placeholder="eg-110" required />
+          </div>
         </div>
-        <div>
-            <div>
-                <h1>bharath</h1>
-            </div>
-            <div>
-                <img src="">
-            </div>
-        </div>
+      </form>
+    </div>
+
+    <button routerLink="/second" class="button-1">Back</button>
+  </div>
+  <div>
+    <div class="c-img">
+      <img *ngIf="imageSrc" [src]="imageSrc">
+    </div>
+    <div>
+      <h1 *ngIf="data.head.length==0">Product Tittle</h1>
+      <h1 *ngIf="data.head.length>0">{{data.head}}</h1>
+      <p *ngIf="data.description.length==0">Product Description</p>
+      <p *ngIf="data.description.length>0">{{data.description}}</p>
+    </div>
+  </div>
 </div>
-
-
-
-            
-                

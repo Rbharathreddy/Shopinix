@@ -256,4 +256,15 @@ select {
       width: 0;
     }
   }
+  .img-input{
+    width: 100px;
+    height: 100px;
+    background: url(https://cdn.icon-icons.com/icons2/510/PNG/512/image_icon-icons.com_50366.png);
+    background-size: cover;
+  }
+  .img-input input{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
   

@@ -10,8 +10,8 @@ import { FirstpageComponent } from './firstpage/firstpage.component';
 
 const routes:Routes=[
   {path:'second',component:SecondpageComponent},
- 
-  
+  {path:'',component:FirstpageComponent},
+  {path:'third',component:ThirdpageComponent},
 ]
 @NgModule({
   declarations: [
